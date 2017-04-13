@@ -1,0 +1,16 @@
+c:\users\bcarstens\documents\visual studio 2012\Projects\Chrome Extension\Chrome Extension\bin\Chrome Extension.dll
+c:\users\bcarstens\documents\visual studio 2012\Projects\Chrome Extension\Chrome Extension\bin\Chrome Extension.pdb
+c:\users\bcarstens\documents\visual studio 2012\Projects\Chrome Extension\Chrome Extension\obj\Debug\Chrome Extension.csprojResolveAssemblyReference.cache
+c:\users\bcarstens\documents\visual studio 2012\Projects\Chrome Extension\Chrome Extension\obj\Debug\Chrome Extension.dll
+c:\users\bcarstens\documents\visual studio 2012\Projects\Chrome Extension\Chrome Extension\obj\Debug\Chrome Extension.pdb
+C:\Git\capture-chrome-pattern-build-tools\Chrome Extension\Chrome Extension\bin\Chrome Extension.dll
+C:\Git\capture-chrome-pattern-build-tools\Chrome Extension\Chrome Extension\bin\Chrome Extension.pdb
+C:\Git\capture-chrome-pattern-build-tools\Chrome Extension\Chrome Extension\obj\Debug\Chrome Extension.csprojResolveAssemblyReference.cache
+C:\Git\capture-chrome-pattern-build-tools\Chrome Extension\Chrome Extension\obj\Debug\Chrome Extension.dll
+C:\Git\capture-chrome-pattern-build-tools\Chrome Extension\Chrome Extension\obj\Debug\Chrome Extension.pdb
+C:\Users\jstull\Documents\Projects\capture-chrome-pattern-build-tools\Chrome Extension\Chrome Extension\bin\Chrome Extension.dll
+C:\Users\jstull\Documents\Projects\capture-chrome-pattern-build-tools\Chrome Extension\Chrome Extension\bin\Chrome Extension.pdb
+C:\Users\jstull\Documents\Projects\capture-chrome-pattern-build-tools\Chrome Extension\Chrome Extension\obj\Debug\Chrome Extension.csprojResolveAssemblyReference.cache
+C:\Users\jstull\Documents\Projects\capture-chrome-pattern-build-tools\Chrome Extension\Chrome Extension\obj\Debug\Chrome Extension.dll
+C:\Users\jstull\Documents\Projects\capture-chrome-pattern-build-tools\Chrome Extension\Chrome Extension\obj\Debug\Chrome Extension.pdb
+C:\Git\capture-chrome-pattern-build-tools\Chrome Extension\Chrome Extension\bin\Chrome Extension.dll.config

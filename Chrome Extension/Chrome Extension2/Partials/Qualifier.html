@@ -1,0 +1,33 @@
+﻿<div class="FieldEdit">
+    <div class="FieldName">Selector</div>
+    <div class="FieldValue"><input type="text" ng-model="qualifier.Selector" /></div>
+</div>
+<div class="FieldEdit">
+    <div class="FieldName">Type</div>
+    <div class="FieldValue">
+        <select ng-model="qualifier.ValidationType">
+            <option value="Exists" title="Exists on the Page">Exists on the Page</option>
+            <option value="NotExists" title="Does Not Exist on the Page">Does Not Exist on the Page</option>
+            <option value="Quantity" title="Quantity Exists on the Page">Quantity Exists on the Page</option>
+        </select>
+    </div>
+</div>
+<div ng-hide="qualifier.ValidationType!='Quantity'">
+    <div class="FieldEdit">
+        <div class="FieldName">Operand</div>
+        <div class="FieldValue">
+            <select ng-model="qualifier.Operand">
+                <option value=">" title="> Greater Than">&gt; Greater Than</option>
+                <option value=">=" title=">= Greater Than or Equal to">&gt;= Greater Than or Equal to</option>
+                <option value="=" title="Equals">= Equals</option>
+                <option value="<=" title="<= Less Than or Equal to">&lt;= Less Than or Equal to</option>
+                <option value="<" title="< Less Than">&lt; Less Than</option>
+                <option value="!=" title="Is Not Equal To">!= Is Not Equal To</option>
+            </select>
+        </div>
+    </div>
+    <div class="FieldEdit">
+        <div class="FieldName">Value</div>
+        <div class="FieldValue"><input type="number" min="0" required="true" ng-model="qualifier.Value" /></div>
+    </div>
+</div>

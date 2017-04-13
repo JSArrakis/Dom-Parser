@@ -1,0 +1,15 @@
+﻿<div class="GroupFields FieldExpandableEdit">
+    <div class="FieldName" ng-init="showGroupFields=true" ng-click="showGroupFields=!showGroupFields" ng-class="{'Expanded': showGroupFields}">Groups &amp; Fields</div>
+    <div class="FieldValue" ng-repeat="groupField in groupFields | orderBy:'Field':'Group'" ng-show="showGroupFields" ng-class="{'FieldValueGroup': groupField.Group!==undefined, 'FieldValueField': groupField.Group===undefined}">
+        <div ng-switch="groupField.Group" style="padding: 0px;">
+            <div class="" ng-switch-when="undefined" style="padding: 0px;">
+                <div ng-include="'/Partials/Field.html'" ng-init="field=groupField" style="padding: 0px;"></div>
+                <div style="clear:both;"></div><!-- TODO: Look At This Clear -->
+            </div>
+            <div class="" ng-switch-default="" style="padding: 0px;">
+                <div ng-include="'/Partials/Group.html'" ng-init="group=groupField" style="padding: 0px;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+

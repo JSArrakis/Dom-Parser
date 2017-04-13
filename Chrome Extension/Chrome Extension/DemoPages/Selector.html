@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <script type="text/javascript" src="jquery.min.js"></script>
+
+</head>
+<body>
+    <div id="Nav">
+        <a href="Selector.html">Pattern Demo Page</a>
+        <a href="Qualifier.html">Qualifier Demo Page</a>
+        <a href="Buttons.html">Button Demo Page</a>
+        <a href="Processors.html">Test Processor Page</a>
+    </div>
+    <div id="Simple" class="section">
+        <div class="title">Simple</div>
+        <span class="header">Name</span><span id="Name">John Smith</span><br />
+        <div><span class="header">False Name</span><span id="Name">Garbage</span></div>
+        <div><span class="header">Phone</span><span id="Phone">555-555-5555</span></div>
+        <div><span class="header">Email</span><span id="Email">john@ringlead.com</span></div>
+    </div>
+    <div id="NthOf" class="section">
+        <div class="title">Nth-of-Type</div>
+        <span class="header">Name</span><span>John Smith</span><br />
+        <span class="header">Phone</span><span>555-555-5555</span><br />
+        <span class="header">Email</span><span>john@ringlead.com</span>
+    </div>
+    <div id="Scope" class="section">
+        <div class="title">Scope</div>
+        <span class="scope">Scope 0 of < -4</span>
+        <div class="scope">
+            <span class="scope">Scope 1, -4</span>
+            <div class="scope">
+                <span class="scope">Scope 2, -3</span>
+                <div class="scope">
+                    <span class="scope">Scope 3, -2</span>
+                    <div class="scope">
+                        <span class="scope">Scope 4, -1</span>
+                        <div class="scope">
+                            <span class="scope">Scope Not Defined, *, or > 4</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="FlatList" class="section">
+        <div class="title">Flat List</div>
+        <span class="header">Company</span><span>My Company</span><br />
+        <span class="header">Name</span><span>John Smith</span><br />
+        <span class="header">Phone</span><span>555-555-5555</span><br />
+        <span class="header">Email</span><span>john@ringlead.com</span><br />
+        <span class="header">Name</span><span>Jane Smith</span><br />
+        <span class="header">Phone</span><span>555-555-6666</span><br />
+        <span class="header">Email</span><span>jane@ringlead.com</span><br />
+        <span class="header">Name</span><span>Jack Smith</span><br />
+        <span class="header">Phone</span><span>555-555-7777</span><br />
+        <span class="header">Email</span><span>jack@ringlead.com</span><br />
+        <span class="header">Name</span><span>Jill Smith</span><br />
+        <span class="header">Phone</span><span>555-555-8888</span><br />
+        <span class="header">Email</span><span>jill@ringlead.com</span>
+
+    </div>
+    <div id="AsymFlatList" class="section">
+        <div class="title">Asymetrical Flat List</div>
+        <span class="header">Company</span><span>My Company</span><br />
+        <span class="header">Name</span><span>John Smith</span><br />
+        <span class="header">Phone</span><span>555-555-5555</span><br />
+        <span class="header">Email</span><span>john@ringlead.com</span><br />
+        <hr />
+        <span class="header">Name</span><span>Jane Smith</span><br />
+        <span class="header">Phone</span><span>555-555-6666</span><br />
+        <span class="header">Email</span><span>jane@ringlead.com</span><br />
+        <span class="header">Website</span><span>www.ringlead.com</span><br />
+        <hr />
+        <span class="header">Name</span><span>Jack Smith</span><br />
+        <span class="header">Title</span><span>555-555-7777</span><br />
+        <span class="header">Phone</span><span>555-555-7777</span><br />
+        <span class="header">Email</span><span>jack@ringlead.com</span><br />
+        <hr />
+        <span class="header">Name</span><span>Jill Smith</span><br />
+        <span class="header">Phone</span><span>555-555-8888</span><br />
+        <span class="header">Email</span><span>jill@ringlead.com</span>
+
+    </div>
+    <div id="IFrame" class="section">
+        <div class="title">iFrame</div>
+        <iframe id="IFrame" src="IFrame.html"></iframe>
+    </div>
+    <div id="NameList" class="section">
+        <div class="title">Names List</div>
+        John Smith<br />
+        Jane Smith<br />
+        Jack
+        Smith<br />
+        Jill Smith<br />
+    </div>
+</body>
+</html>

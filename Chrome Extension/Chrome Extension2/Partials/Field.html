@@ -1,0 +1,47 @@
+﻿<div class="Field FieldExpandableEdit">
+    <div class="FieldValue">
+        <div class="FieldEdit">
+            <div class="FieldName">Field Name</div>
+            <div class="FieldValue"><input type="text" ng-model="field.Field" /> </div>
+        </div>
+        <div class="FieldEdit">
+            <div class="FieldName">Field Selectors</div>
+            <div class="FieldValue">
+                <div class="Selector" ng-repeat="selector in field.Selectors">
+                    <div class="FieldEdit">
+                        <div class="FieldName">Selector</div>
+                        <div class="FieldValue"><input type="text" ng-model="selector.Selector" /> </div>
+                    </div>
+                    <div class="FieldEdit">
+                        <div class="FieldName">Processors</div>
+                        <div class="FieldValue">
+                            <span class="Process" ng-repeat="processor in selector.Processors"><input type="text" ng-model="processor" /></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+</div>
+
+
+
+
+<!--Field Name
+<input type="text" ng-model="groupField.Field" />
+Field Selectors
+<div>
+    <span class="Selector" ng-repeat="selector in groupField.Selectors">
+        <input type="text" ng-model="selector.Selector" />
+        <div><span class="Process" ng-repeat="processor in selector.Processors"><input type="text" ng-model="processor" /></span></div>
+    </span>
+</div>-->
+
+
+
+
+
+
+
+

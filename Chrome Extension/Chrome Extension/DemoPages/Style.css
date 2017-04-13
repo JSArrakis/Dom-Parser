@@ -1,0 +1,52 @@
+﻿BODY {
+    font-family: Arial;
+}
+.section {
+    margin-bottom: 20px;
+    border: solid 2px silver;
+}
+.title {
+    font-size: larger;
+    font-weight: bold;
+    width: 100%;
+    background-color: silver;
+    padding: 2px;
+}
+.header {
+    display: inline-block;
+    width: 100px;
+    font-weight: bold;
+}
+SPAN.scope {
+}
+DIV.scope {
+    padding-left: 10px;
+}
+IFRAME {
+    border: dashed 2px red;
+    width: 100%;
+    height: 275px;
+}
+HR {
+    border: solid 1px silver;
+}
+DIV#Nav {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    padding: 5px;
+    border-bottom: 2px solid black; 
+    border-left: 2px solid black; 
+    -webkit-border-radius: 0px 0px 0px 5px;
+    background-color: white;
+    font-weight: bold;
+}
+DIV#Nav A {
+    text-wrap: none;
+    display: block;
+    text-decoration: none;
+    margin: 5px;
+}  
+DIV#Nav A:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,222 @@
+﻿{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "required": [ "ID", "Name", "Domains", "Paths", "SchemaVersion" ],
+    "properties": {
+        "ID": { "type": "string", "pattern": "^([A-z0-9]{8})(-)([A-z0-9]{4})(-)([A-z0-9]{4})(-)([A-z0-9]{4})(-)([A-z0-9]{12})$" },
+        "Name": { "type": "string" },
+        "Description": { "type": "string" },
+        "Domains": { "$ref": "#/definitions/StringArrayRequired" },
+        "UserDomains": { "$ref": "#/definitions/StringArray" },
+        "Paths": { "type": "array", "minItems": 1, "items": { "$ref": "#/definitions/Path" } },
+		"SchemaVersion": { "type": "string", "pattern": "^1\\.0(?:\\.(?:0|[1-9][0-9]{0,})){1,2}?$" },
+		"PatternVersion": { "type": "string", "pattern": "^(?:(?:0|[1-9][0-9]{0,}))(?:\\.(?:0|[1-9][0-9]{0,})){0,3}$" }
+    },
+    "definitions": {
+        "Path": {
+            "required": [ "Name", "UrlPatterns", "Layouts" ],
+            "properties": {
+                "Name": { "type": "string" },
+                "Description": { "type": "string" },
+                "UrlPatterns": { "$ref": "#/definitions/StringArrayRequired" },
+                "Layouts": { "$ref": "#/definitions/LayoutList" }
+            }
+        },
+        "LayoutList": { "type": "array", "minItems": 1, "items": { "$ref": "#/definitions/Layout" } },
+        "Layout": {
+            "required": [ "Name", "Groups" ],
+            "properties": {
+                "Name": { "type": "string" },
+                "Description": { "type": "string" },
+                "ImportCSS": { "$ref": "#/definitions/StringArray" },
+                "ImportStyle": { "type": "string" },
+                "Qualifiers": { "$ref": "#/definitions/QualifierList" },
+                "Groups": { "$ref": "#/definitions/GroupList" },
+                "Events": { "$ref": "#/definitions/EventList" }
+            }
+        },
+        "EventList": { "type": "array", "minItems": 1, "items": { "$ref": "#/definitions/Event" } },
+        "Event": {
+            "required": [ "Name", "Groups" ],
+            "properties": {
+                "Event": { "$ref": "#/definitions/EventEnum" },
+                "Selectors": { "$ref": "#/definitions/SelectorList" },
+                "Qualifiers": { "$ref": "#/definitions/QualifierList" },
+                "Action": { "$ref": "#/definitions/EventActionEnum" }
+            }
+        },
+        "GroupFieldList": { "type": "array", "minItems": 0, "items": { "anyOf": [ { "$ref": "#/definitions/Group" }, { "$ref": "#/definitions/Field" } ] } },
+        "GroupList": { "type": "array", "items": { "$ref": "#/definitions/Group" } },
+        "Group": {
+            "required": [ "Group", "Selectors", "GroupFields" ],
+            "properties": {
+                "Group": { "type": "string" },
+                "Targeted": { "type": "boolean" },
+                "GroupType": { "$ref": "#/definitions/GroupTypeEnum" },
+                "Description": { "type": "string" },
+                "Modifier": { "type": "string" },
+                "Multiple": { "type": "boolean" },
+                "Skip": { "type": "integer" },
+                "Take": { "type": "integer" },
+                "Step": { "type": "integer" },
+                "Selectors": { "$ref": "#/definitions/SelectorList" },
+                "Qualifiers": { "$ref": "#/definitions/QualifierList" },
+                "Containers": { "$ref": "#/definitions/ContainerList" },
+                "GroupFields": { "$ref": "#/definitions/GroupFieldList" },
+                "Events": { "$ref": "#/definitions/EventList" }
+            }
+        },
+        "FieldList": { "type": "array", "items": { "$ref": "#/definitions/Field" } },
+        "Field": {
+            "required": [ "Field" ],
+            "properties": {
+                "Field": { "type": "string" },
+                "Keep": { "$ref": "#/definitions/FieldKeepEnum" },
+                "Selectors": { "$ref": "#/definitions/SelectorList" },
+                "Qualifiers": { "$ref": "#/definitions/QualifierList" }
+            }
+        },
+        "ContainerList": {
+            "anyOf": [
+                { "type": "string" },
+                { "$ref": "#/definitions/Container" },
+                { "type": "array", "items": { "anyOf": [ { "type": "string" }, { "$ref": "#/definitions/Container" } ] } }
+            ]
+        },
+        "Container": {
+            "required": [ "Name", "Selectors", "Position" ],
+            "properties": {
+                "Name": { "type": "string" },
+                "Selectors": { "$ref": "#/definitions/SelectorList" },
+                "Qualifiers": { "$ref": "#/definitions/QualifierList" },
+                "Position": { "$ref": "#/definitions/ContainerPositionEnum" },
+                "Class": { "type": "string" },
+                "Style": { "type": "string" },
+                "Type": { "type": "string" },
+                "Attributes": { "type": "string" },
+                "Scope": { "type": "integer" },
+                "Inner": { "$ref": "#/definitions/InnerList" },
+                "Buttons": { "$ref": "#/definitions/ButtonList" }
+            }
+        },
+        "ButtonList": {
+            "anyOf": [
+                { "type": "string" },
+                { "$ref": "#/definitions/Button" },
+                { "type": "array", "items": { "anyOf": [ { "type": "string" }, { "$ref": "#/definitions/Button" } ] } }
+            ]
+        },
+        "Button": {
+            "required": [ "Name", "Action" ],
+            "properties": {
+                "Name": { "type": "string" },
+                "Action": { "$ref": "#/definitions/EventActionEnum" },
+                "Class": { "type": "string" },
+                "Style": { "type": "string" },
+                "Type": { "type": "string" },
+                "Title": { "type": "string" },
+                "Attributes": { "type": "string" },
+                "Contents": { "type": "string" },
+                "Inner": { "$ref": "#/definitions/InnerList" }
+            }
+        },
+        "InnerList": {
+            "anyOf": [
+                { "type": "string" },
+                { "$ref": "#/definitions/Inner" },
+                { "type": "array", "items": { "anyOf": [ { "type": "string" }, { "$ref": "#/definitions/Inner" } ] } }
+            ]
+        },
+        "Inner": {
+            "properties": {
+                "Class": { "type": "string" },
+                "Style": { "type": "string" },
+                "Type": { "type": "string" },
+                "Attributes": { "type": "string" },
+                "Contents": { "type": "string" },
+                "Inner": { "$ref": "#/definitions/InnerList" }
+            }
+        },
+        "SelectorList": {
+            "type": "array",
+            "items": { "anyOf": [ { "type": "string" }, { "$ref": "#/definitions/Selector" } ] }
+        },
+        "Selector": {
+            "type": "object",
+            "required": [ "Selector" ],
+            "properties": {
+                "Selector": { "type": "string" },
+                "Selectors": { "$ref": "#/definitions/SelectorList" },
+                "Qualifiers": { "$ref": "#/definitions/QualifierList" },
+                "Processors": { "$ref": "#/definitions/ProcessorList" },
+                "Attribute": { "type": "string" },
+                "Scope": { "type": "integer" }
+            }
+        },
+        "ProcessorList": {
+            "type": "array",
+            "items": { "anyOf": [ { "type": "string" }, { "$ref": "#/definitions/Processor" } ] }
+        },
+        "Processor": {
+            "required": [ "Name" ],
+            "properties": {
+                "Name": { "$ref": "#/definitions/ProcessorsEnum" },
+                "Params": { "oneOf": [ { "type": "object" }, { "type": "string" } ] }
+            }
+        },
+        "QualifierList": { "type": "array", "items": { "$ref": "#/definitions/Qualifier" } },
+        "Qualifier": {
+            "required": [ "Selectors", "ValidationType" ],
+            "properties": {
+                "Operand": { "$ref": "#/definitions/QualifierOperandEnum" },
+                "Not": { "type": "boolean" },
+                "Selectors": { "$ref": "#/definitions/SelectorList" },
+                "ValidationType": { "$ref": "#/definitions/QualifierValidationTypeEnum" },
+                "Quantity": { "type": "integer" },
+                "Value": { "type": "string" },
+                "Scope": { "type": "integer" }
+            }
+        },
+        "EventEnum": {
+            "type": "string",
+            "enum": [ "blur", "change", "click", "dblclick", "hover", "error", "focus", "focusin", "focusout", "keydown", "keyup", "keypress", "load", "mousedown", "mouseenter", "mouseleave", "mousemove", "mouseout", "mouseover", "mouseup", "ready", "resize", "scroll", "select", "submit", "unload" ]
+        },
+        "EventActionEnum": {
+            "type": "string",
+            "enum": [ "Capture", "CaptureGroup", "AddButtons", "RemoveButtons", "ShowButtons", "HideButtons", "Alert" ]
+        },
+        "GroupTypeEnum": {
+            "type": "string",
+            "enum": [ "Profile", "Profiles", "Employment", "Education", "Address" ]
+        },
+        "FieldKeepEnum": {
+            "type": "string",
+            "enum": [ "FirstValue", "FirstSelector", "All" ]
+        },
+        "ContainerPositionEnum": {
+            "type": "string",
+            "enum": [ "Before", "Insert", "Append", "After", "Wrap", "WrappInner" ]
+        },
+        "ProcessorsEnum": {
+            "type": "string"
+        },
+        "QualifierValidationTypeEnum": {
+            "type": "string",
+            "enum": [ "Exists", "NotExists", "Quantity", "Equals", "Matches" ]
+        },
+        "QualifierOperandEnum": {
+            "type": "string",
+            "enum": [ "Or", "And" ]
+        },
+        "StringArray": {
+            "type": "array",
+            "items": { "type": "string" },
+            "uniqueItems": true
+        },
+        "StringArrayRequired": {
+            "type": "array",
+            "items": { "type": "string" },
+            "uniqueItems": true,
+            "minItems": 1
+        }
+    }
+}

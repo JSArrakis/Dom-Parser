@@ -1,0 +1,103 @@
+﻿.Capture_Injected_Button_Logo {
+    border: solid gray 1px;
+    -webkit-border-radius: 5px;
+    display: inline-block;
+    position: relative;
+    box-shadow: inset -2px -2px 7px gray;    
+    text-align: center;
+    padding: 3px 3px 3px 3px;
+    background-color: white;
+}
+.Capture_Injected_Button_Logo IMG {
+    height: 100%;
+    content: url('chrome-extension://__MSG_@@extension_id__/images/captureLogo.png');
+}
+.Capture_Injected_Button_Logo:hover {
+    border-color: #B22323;
+    box-shadow: inset 2px 2px 7px gray;    
+}
+.Capture_Injected_Button_Logo:active {
+    background-color: yellow;
+}
+.Capture_Injected_Button_Logo * {
+    pointer-events: none; 
+}
+.Capture_Injected_Button_Icon {
+    border: solid gray 1px;
+    -webkit-border-radius: 5px;
+    display: inline-block;
+    position: relative;
+    box-shadow: inset -2px -2px 7px gray;    
+    text-align: center;
+    padding: 3px 3px 3px 3px;
+    background-color: white;
+}
+.Capture_Injected_Button_Icon IMG {
+    height: 100%;
+    content: url('chrome-extension://__MSG_@@extension_id__/images/cc48.png');
+}
+.Capture_Injected_Button_Icon:hover {
+    border-color: #B22323;
+    box-shadow: inset 2px 2px 7px gray;    
+}
+.Capture_Injected_Button_Icon:active {
+    background-color: yellow;
+}
+.Capture_Injected_Button_Icon * {
+    pointer-events: none; 
+}
+
+.Capture_Injected_Container, 
+.Capture_Injected_Container_Block, 
+.Capture_Injected_Container_InlineBlock, 
+.Capture_Injected_Container_Inline, 
+.Capture_Injected_Container_FloatLeft, 
+.Capture_Injected_Container_FloatRight {
+    position: relative;
+    height: 0px;
+    width: 0px;
+    overflow: visible;    
+}
+
+.Capture_Injected_Container_Block {
+    display: block;
+}
+.Capture_Injected_Container_InlineBlock {
+    display: inline-block;
+}
+.Capture_Injected_Container_Inline {
+    display: inline;
+}
+
+.Capture_Injected_Container_FloatLeft {
+    float: left;
+}
+.Capture_Injected_Container_FloatRight {
+    float: right;
+}
+
+.Capture_Injected_Container_Inner, 
+.Capture_Injected_Container_Inner_TopLeft, 
+.Capture_Injected_Container_Inner_TopRight, 
+.Capture_Injected_Container_Inner_BottomLeft, 
+.Capture_Injected_Container_Inner_BottomRight {
+    position: absolute;
+}
+.Capture_Injected_Container_Inner_TopLeft {
+    top: 0px;
+    left: 0px;
+}
+.Capture_Injected_Container_Inner_TopRight {
+    top: 0px;
+    right: 0px;
+}
+.Capture_Injected_Container_Inner_BottomLeft {
+    bottom: 0px;
+    left: 0px;
+}
+.Capture_Injected_Container_Inner_BottomRight {
+    bottom: 0px;
+    right: 0px;
+}
+
+

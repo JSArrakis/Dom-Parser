@@ -1,0 +1,78 @@
+﻿.C_Button {
+}
+.C_Button.Large {
+}
+
+.C_Capture_Icon {
+    background-image: url('http://download.broadlook.com/erecruit/ereccruit-Icon.png');
+    background-color: #23638B;
+    -webkit-border-radius: 3px;
+}
+.C_Capture_Icon.Large {
+    -webkit-border-radius: 5px;
+}
+.C_Capture_Logo {
+    background-image: url('http://download.broadlook.com/erecruit/ereccruit-Logo.png');
+    background-size: 46px 10px;
+    height: 16px;
+    width: 42px;
+    background-color: #23638B;
+    -webkit-border-radius: 3px;
+}
+.C_Capture_Logo.Large {
+    background-size: 111px 24px;
+    height: 29px;
+    width: 124px;
+    -webkit-border-radius: 5px;
+}
+
+
+.C_Button_Capture_Icon {
+    background-image: url('http://download.broadlook.com/erecruit/ereccruit-Icon.png');
+}
+.C_Button_Capture_Icon.Large {
+}
+.C_Button_Capture_Logo {
+    background-image: url('http://download.broadlook.com/erecruit/ereccruit-Logo.png');
+    background-size: 46px 10px;
+    height: 10px;
+    width: 46px;
+}
+.C_Button_Capture_Logo.Large {
+    background-size: 111px 24px;
+    height: 24px;
+    width: 111px;
+}
+
+.C_Button_Background_Left {
+}
+.C_Button_Background_Left.Large {
+}
+.C_Button_Background_Fill {
+}
+.C_Button_Background_Fill.Large {
+}
+.C_Button_Background_Right {
+}
+.C_Button_Background_Right.Large {
+}
+
+.C_Button_Text_Two_Line {
+}
+.C_Button_Text_Two_Line.Large {
+}
+.C_Button_Text_Two_Line_With_Icon {
+}
+.C_Button_Text_Two_Line_With_Icon.Large {
+}
+.C_Button_Text_One_Line {
+}
+.C_Button_Text_One_Line.Large {
+}
+.C_Button_Text_One_Line_With_Icon {
+}
+.C_Button_Text_One_Line_With_Icon.Large {
+}
+
+
+

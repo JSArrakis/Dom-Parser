@@ -1,0 +1,35 @@
+{
+	"manifest_version": 2,
+
+	"name": "Notify Test Extention",
+	"description": "Notify Test Extention",
+	"version": "1.0",
+
+	"browser_action": {
+		"default_icon": "icon2.png",
+		"default_popup": "popup2.html"
+	},
+	"permissions": [
+		"contextMenus",
+		"tabs",
+		"<all_urls>"
+	],
+	"icons": {
+		"16": "icon2.png",
+		"48": "icon2.png",
+		"128": "icon2.png"
+	},
+	"background": {
+		"scripts": ["jquery.min.js","background2.js"]
+	},
+	"content_scripts": [ {
+		"css": [ "hoverCSS2.css" ],
+		"js": [ "jquery.min.js", "contentScript2.js" ],
+		"matches": [ "<all_urls>" ]
+	} ],
+	"web_accessible_resources": [
+		"contentScript2.js",
+		"hoverback2.png"
+	]
+
+}

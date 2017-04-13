@@ -1,0 +1,25 @@
+﻿<div class="Group FieldExpandableEdit">
+    <div class="FieldValue">
+        <div class="FieldEdit">
+            <div class="FieldName">Group Name</div>
+            <div class="FieldValue"><input type="text" ng-model="group.Group" /> </div>
+        </div>
+        <div class="FieldEdit">
+            <div class="FieldName">Group Selectors</div>
+            <div class="FieldValue">
+                <span class="Selector" ng-repeat="selector in group.Selectors"><input type="text" ng-model="selector" /></span>
+            </div>
+        </div>
+        <div ng-include="'Partials/GroupField.html'" ng-init="groupFields=group.GroupFields"></div>
+    </div>
+</div>
+
+<!--Group Name
+<input type="text" ng-model="groupField.Group" />
+Group Selectors
+<div><span class="Selector" ng-repeat="selector in groupField.Selectors"><input type="text" ng-model="selector" /></span></div>
+<div ng-include="'Partials/GroupField.html'" ng-init="groupFields=groupField.GroupFields"></div>-->
+
+
+
+

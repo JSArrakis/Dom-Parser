@@ -1,0 +1,23 @@
+﻿body {
+}
+
+:hover > :hover {
+    /*border: solid 1px orange;*/
+    /*background-color: blue;
+    background-opacity: 0.5;*/
+    /*background-image: url('chrome-extension://bbfahfbopcgaehpelhlemoadekjabhng/hoverback.png'); !important;
+    background-repeat: repeat; !important;*/
+    /*border: solid 1px red; !important;*/
+}
+
+.BLT_Hover, .BLT_Hover:hover {
+    /*background-color: blue;*/
+    background-image: url('chrome-extension://bbfahfbopcgaehpelhlemoadekjabhng/hoverback.png') !important;
+    background-repeat: repeat !important;
+
+}
+.BLT_Field, .BLT_Field:hover {
+    /*background-color: blue;*/
+    background-image: url('chrome-extension://bbfahfbopcgaehpelhlemoadekjabhng/hoverback.png') !important;
+    background-repeat: repeat !important;
+}

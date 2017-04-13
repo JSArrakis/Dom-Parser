@@ -1,0 +1,61 @@
+﻿{
+    "$schema": "/patterns/Pattern-Schema.json#?reload",
+    "ID": "",
+    "Name": "",
+    "Description": "",
+    "Domains": [ "" ],
+    "UserDomains": [ ],
+    "Paths": [
+        {
+            "Description": "",
+            "Name": "",
+            "UrlPatterns": [ "" ],
+            "Layouts": [
+                {
+                    "Name": "",
+                    "Description": "",
+                    "ImportCSS": [ "" ],
+                    "ImportStyle": "",
+                    "Qualifiers": [
+                        { "Selectors": "", "ValidationType": "Exists", "Quantity": 1, "Value": "" },
+                        { "Selectors": { "Selector": "" }, "ValidationType": "Exists", "Quantity": 1, "Value": "" },
+                        { "Selectors": [ "" ], "ValidationType": "Exists", "Quantity": 1, "Value": "" },
+                        { "Selectors": [ { "Selector": "" } ], "ValidationType": "Exists", "Quantity": 1, "Value": "" }
+                    ],
+                    "Groups": [
+                        {
+                            "Group": "",
+                            "Description": "",
+                            "Modifier": "",
+                            "Instances": "",
+                            "Qualifiers": [ { "Selectors": "", "ValidationType": "Exists", "Quantity": 1, "Value": "" } ],
+                            "Selectors": [ ],
+                            "Containers": [
+                                {
+                                    "Name": "",
+                                    "Selectors": [ ],
+                                    "Position": "After"
+
+                                }
+                            ],
+                            "GroupFields": [ ],
+                            "Groups": [ ],
+                            "Fields": [
+                                {
+                                    "Field": "",
+                                    "Selectors": [
+                                        {
+                                            "Selector": "",
+                                            "Scope": 0,
+                                            "Processors": [ "Exists", { "Name": "Exists", "Params": { } } ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

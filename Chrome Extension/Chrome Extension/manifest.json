@@ -1,0 +1,49 @@
+{
+	"manifest_version": 2,
+
+	"name": "Builder Extention",
+	"description": "Builder Extention",
+	"version": "1.1",
+
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+	},
+	"permissions": [
+		"contextMenus",
+		"tabs",
+		"<all_urls>"
+	],
+	"icons": {
+		"16": "icon.png",
+		"48": "icon.png",
+		"128": "icon.png"
+	},
+	"background": {
+		"scripts": ["jquery.min.js","background.js"]
+	},
+	"content_scripts": [ {
+		"css": [ "hoverCSS.css", "stylesheets/button.css" ],
+		"js": [ "jquery.min.js", "contentScript.js" ],
+		"matches": [ "<all_urls>" ]
+	} ],
+	"web_accessible_resources": [
+		"contentScript.js",		
+		"stylesheets/button.css",
+		"stylesheets/buttonOverRide.css",
+		"stylesheets/buttonsOverRideERecruit.css",
+		"images/hoverback.png",
+		"images/cc16.png",
+		"images/cc48.png",
+		"images/buttonBackSquare.png",
+		"images/buttonBack70.png",
+		"images/buttonBack100.png",
+		"images/buttonBack130.png",
+		"images/buttonBackLeft.png",
+		"images/buttonBackFill.png",
+		"images/buttonBackRight.png",
+		"images/captureLogo.png",
+		"images/captureLogo18.png"
+	]
+
+}

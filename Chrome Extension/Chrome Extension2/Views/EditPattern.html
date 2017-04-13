@@ -1,0 +1,345 @@
+﻿<style>
+    DIV {
+        box-sizing:border-box;
+        position: relative;
+    }
+    SPAN {
+        position: relative;
+    }
+    INPUT, SELECT {
+        font-size: 10px;
+        width: 100%;
+        border: solid 1px silver;
+        margin: 0px;
+        padding: 2px;
+        display: block;
+    }
+    INPUT {
+        /*margin-right: 19px;*/
+    }
+    SELECT {
+        /*margin-right: 0px;*/
+    }
+    DIV.FieldEdit, DIV.FieldExpandableEdit {
+        width: 100%;
+        clear:both;
+        /*background-color: silver;*/
+        padding-left: 5px;
+        min-height: 20px;
+    }
+    DIV.FieldEdit {
+        padding-right: 5px;
+    }
+    DIV.FieldName {
+        width: 20%;
+        float: left;
+        /*font-weight: bold;*/
+    }
+    DIV.FieldEdit > DIV.FieldValue, DIV.FieldEdit > DIV.FieldValueCollection {
+        padding-right: 6px;
+        width: 75%;
+        float: right;
+    }
+    /*DIV.FieldEdit > DIV.FieldValueCollection {
+        padding-right: 0px;
+    }*/
+    DIV.FieldEdit > DIV.FieldValueCollection  > DIV.FieldEdit > DIV.FieldValue {
+        padding-right: 0px;
+    }
+    /*DIV.FieldValue, DIV.FieldValueCollection {
+    }*/
+    DIV.FieldExpandableEdit {
+        border-radius: 5px;
+        background-color: #00a3e5;
+        border: 2px solid #00a3e5;
+        border-left-width: 10px;
+        clear: both;
+        padding: 0px;
+        min-height: 22px;
+        padding-top: 20px;
+    }
+    DIV.FieldExpandableEdit > DIV.FieldName {
+        width: 100%;
+        clear: both;
+        background-image: url('/imgs/toggle-expand.png');
+        background-repeat: no-repeat;
+        background-size: 16px;
+        background-position: 0px 0px;
+        float: none;
+        padding-left: 20px;
+        color: white;
+        box-sizing:border-box;
+        position: absolute;
+        left: -7px;
+        right: 0px;
+        top: 0px;
+        height: 20px;
+    }
+    DIV.FieldExpandableEdit > DIV.FieldName.Expanded {
+        background-image: url('/imgs/toggle-collapse-alt.png');
+        margin-bottom: -10px;
+    }
+    DIV.FieldExpandableEdit > DIV.FieldValue {
+        width: 100%;
+        border-radius: 5px;
+        background-color: white;
+        /*background-color: green;*/
+        border: none;
+        float: none;
+        clear:both;
+        box-sizing:border-box;
+        padding-top: 5px;
+    }
+    /*DIV.FieldExpandableEdit > DIV.FieldValue:first-child,*/
+    /*DIV.FieldExpandableEdit > DIV.FieldValue:nth-of-type(1),*/
+    /*DIV.FieldExpandableEdit > DIV.FieldValue:first-of-type,*/
+    /*DIV.FieldExpandableEdit > DIV.FieldValue:nth-child(1) {
+        margin-top: 20px;
+        background-color: green;
+    }*/
+
+    DIV.FieldValueCollection {
+        border-radius: 3px;
+        border: solid 2px red;
+    }
+
+
+    DIV.FieldValueCollection > SPAN  {
+        display: block;
+        width: 100%;
+    }
+    DIV.FieldValueCollection > INPUT {
+        width: 50%;
+        display: block;
+        float: left;
+    }
+    DIV.FieldValueCollection > A {
+        width: 25%;
+        display: block;
+        float: right;
+        text-align: right;
+    }
+
+    DIV.Pattern, 
+    DIV.Path, 
+    DIV.Layout, 
+    DIV.Group, 
+    DIV.Field {
+        padding-left: 3px;
+        padding-bottom: 3px;
+        width: 100%;
+        clear:both;
+    }
+    DIV.Pattern {
+        /*border-left: 2px solid red;*/
+        border-color: salmon;
+        background-color: salmon;
+        /*width: 500px;*/
+    }
+    DIV.Pattern > DIV > SPAN.Domain {
+        /*border-left: 2px solid silver;*/
+        border-color: #e0e0e0;
+        background-color: #e0e0e0;
+    }
+    DIV.Path {
+        /*border-left: 2px solid Green;*/
+        border-color: lightgreen;
+        background-color: lightgreen;
+    }
+    DIV.Url {
+        /*border-left: 2px solid silver;*/
+        width: 100%;
+        display: block;
+        border-color: #e0e0e0;
+        background-color: #e0e0e0;
+    }
+    DIV.Url > SPAN {
+        display: block;
+        float: left;
+        width: 90%;
+    }
+    DIV.Url > A {
+        display: block;
+        float: right;
+        width: 8%;
+        text-align: center;
+    }
+    DIV.Layout {
+        /*border-left: 2px solid Orange;*/
+        border-color: goldenrod;
+        background-color: goldenrod;
+    }
+    DIV.Layout > DIV > SPAN.Qualifier {
+        /*border-left: 2px solid silver;*/
+        border-color: #e0e0e0;
+        background-color: #e0e0e0;
+    }
+    DIV.GroupFields {
+        border-color: lightblue;
+        background-color: lightblue;
+        /*padding: 0px;*/
+        margin-top: 0px;
+    }
+    DIV.GroupFields > DIV.FieldValue {
+        padding: 0px;
+    }
+    DIV.FieldValueGroup {
+        margin-bottom: -2px;
+        margin-top: 0px;
+    }
+    DIV.FieldValueGroup:last-child, DIV.FieldValueGroup:nth-last-of-type(1)  {
+        margin-bottom: 0px;
+    }
+
+    DIV.FieldValueField {
+        margin-bottom: -2px;
+        margin-top: 0px;
+    }
+    DIV.FieldValueField:last-child {
+        /*margin-bottom: 0px;*/
+    }
+
+    DIV.Qualifier {
+
+    }
+        DIV.Qualifier > DIV {
+        display: block;
+        float: left;
+        width: 90%;
+    }
+    DIV.Qualifier > A {
+        display: block;
+        float: right;
+        width: 8%;
+        text-align: center;
+    }
+
+    DIV.Group {
+        /*border-left: 2px solid Blue;*/
+        /*border-color: lightblue;*/
+        /*background-color: lightblue;*/
+        border-color: blue;
+        background-color: blue;
+        border-width: 2px;
+        padding: 0px;
+    }
+    DIV.Group > DIV {
+        display: block;
+        float: left;
+        width: 90%;
+    }
+    DIV.Group > A {
+        display: block;
+        float: right;
+        width: 8%;
+        text-align: center;
+    }
+    DIV.Group > DIV.FieldValue {
+        margin-top: 0px;
+        background-color: silver;
+    }
+    DIV.Group:last-of-type {
+    }
+    DIV.Group > DIV > SPAN.Qualifier {
+        /*border-left: 2px solid silver;*/
+        /*border-color: #e0e0e0;*/
+        /*background-color: #e0e0e0;*/
+    }
+    DIV.Field {
+        border-color: orange;
+        background-color: orange;
+        border-width: 2px;
+        padding: 0px;
+        background-color: lightyellow;
+    }
+    DIV.Field > DIV.FieldValue {
+        margin-top: 0px;
+        background-color: lightyellow;
+    }
+    DIV.Field:last-of-type {
+        /*border-left: 2px solid Black;*/
+        /*border-color: silver;*/
+        /*margin-bottom: 0px;*/
+        margin-bottom: 0px;
+    }
+    DIV.Field > DIV > SPAN.Selector {
+        /*border-left: 2px solid silver;*/
+        /*border-color: #e0e0e0;*/
+        /*background-color: #e0e0e0;*/
+    }
+    DIV.Field > DIV > DIV.Selector > DIV > SPAN.Process {
+        /*border-left: 2px solid silver;*/
+        /*border-color: #e0e0e0;*/
+        /*background-color: #e0e0e0;*/
+    }
+    .urlPatterValid {
+        border-color: salmon;
+        background-color: salmon;
+    }
+    a.disabled {
+        color: silver;
+    }
+</style>
+<div class="Pattern FieldExpandableEdit">
+    <div class="FieldValue">
+        <div class="FieldEdit" ng-hide="true" >
+            <div class="FieldName">PatternID</div>
+            <div class="FieldValue"><input type="text" ng-model="Pattern.ID" /> </div>
+        </div>
+        <div class="FieldEdit">
+            <div class="FieldName">Pattern Name</div>
+            <div class="FieldValue"><input type="text" ng-model="Pattern.Name" /></div>
+        </div>
+        <div class="FieldEdit">
+            <div class="FieldName">Pattern Domains</div>
+            <div class="FieldValue"><span class="Domain" ng-repeat="domain in Pattern.Domains"><input type="text" ng-model="domain" /></span></div>
+        </div>
+        <div class="Path FieldExpandableEdit">
+            <div class="FieldName" ng-init="patternPaths=true" ng-click="patternPaths=!patternPaths" ng-class="{'Expanded': patternPaths}">Pattern Paths</div>
+            <div class="FieldValue" ng-repeat="urlPath in Pattern.Paths" ng-show="patternPaths">
+                <div class="FieldEdit">
+                    <div class="FieldName">Path Name</div>
+                    <div class="FieldValue"><input type="text" ng-model="urlPath.Name" /></div>
+                </div>
+                <div class="FieldEdit">
+                    <div class="FieldName">URL Paths</div>
+                    <div class="FieldValue FieldValueCollection" ng-init="newUrlPattern=''" >
+                        <div class ="Url" ng-repeat="urlPattern in urlPath.UrlPatterns">
+                            <span><input type="text" ng-model="urlPattern" /></span>
+                            <a href="" ng-click="RemoveUrlPattern(urlPath, urlPattern)">X</a>
+                        </div>
+                        <div class="Url">
+                            <span><input type="text" ng-model="newUrlPattern" ng-class="{'urlPatterValid':ValidateRegEx(newUrlPattern, true)!=true}" /></span>
+                            <a href="" ng-click="AddUrlPattern(urlPath, newUrlPattern)" ng-class="{'disabled':ValidateRegEx(newUrlPattern)!=true}">Add</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="Layout FieldExpandableEdit">
+                    <div class="FieldName" ng-init="pathLayouts=true" ng-click="pathLayouts=!pathLayouts" ng-class="{'Expanded': pathLayouts}">Path Layouts</div>
+                    <div class="FieldValue" ng-repeat="layout in urlPath.Layouts" ng-show="pathLayouts">
+                        <div class="FieldEdit">s
+                            <div class="FieldName">Layout Name</div>
+                            <div class="FieldValue"><input type="text" ng-model="layout.Name" /></div>
+                        </div>
+                        <div class="FieldEdit">
+                            <div class="FieldName">Layout Qualifiers</div>
+                            <div class="FieldValueCollection">
+                                <div class="Qualifier" ng-repeat="qualifier in layout.Qualifiers" on-Clear-On-Repeat-Finished  on-Clear-On-Repeat-Complete="qualifier=false">
+                                    <div ng-include="'/Partials/Qualifier.html'" style="clear:both;"></div>
+                                    <a href="" ng-click="RemoveQualifierPattern(layout, qualifier)" >X</a>
+                                </div>
+                                <div class="Qualifier" ng-init="qualifier={ Selector: '', ValidationType:'Exists', Operand: '=', Value: 1 }">
+                                    <div ng-include="'/Partials/Qualifier.html'" style="clear:both;"></div>
+                                    <a href="" ng-click="AddQualifierPattern(layout, qualifier)" ng-class="{'disabled':ValidateQualifierPattern(layout, qualifier)!=true}">Add</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div ng-include="'/Partials/GroupField.html'" ng-init="groupFields=layout.GroupFields" style="clear:both;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a href="" ng-click="Redirect('/')">Return To All Patterns</a>

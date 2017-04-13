@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <script type="text/javascript" src="jquery.min.js"></script>
+</head>
+<body>
+    <div id="Nav">
+        <a href="Selector.html">Pattern Demo Page</a>
+        <a href="Qualifier.html">Qualifier Demo Page</a>
+        <a href="Buttons.html">Button Demo Page</a>
+        <a href="Processors.html">Test Processor Page</a>
+    </div>
+    <div class="section">
+        <div class="title">Person Text Qualified</div>
+        <span class="header">Name</span><span class="Name">John Smith</span><br />
+        <span class="header">Phone</span><span class="Phone">555-555-5555</span>
+        <span class="header">Email</span><span class="Email">john@ringlead.com</span>
+    </div>
+    <div class="section">
+        <div class="title">Organization Text Qualified</div>
+        <span class="header">Name</span><span class="Name">John Smith</span><br />
+        <span class="header">Phone</span><span class="Phone">555-555-5555</span><br />
+        <span class="header">Email</span><span class="Email">john@ringlead.com</span>
+    </div>
+    <div class="section" itemscope itemtype="http://schema.org/Person">
+        <div class="title">Schema.org Person</div>
+        <span class="header">Name</span><span itemprop="name">John Smith</span><br />
+        <span class="header">Phone</span><span itemprop="telephone">555-555-5555</span>
+        <span class="header">Email</span><span itemprop="email">john@ringlead.com</span>
+        <div class="section" itemprop="affiliation" itemscope itemtype="http://schema.org/Organization">
+            <span class="header">Company</span><span itemprop="name">John Smith</span><br />
+        </div>
+    </div>
+    <div class="section" itemscope itemtype="http://schema.org/Organization">
+        <div class="title">Schema.org Organization</div>
+        <span class="header">Name</span><span itemprop="name">John Smith</span><br />
+        <span class="header">Phone</span><span itemprop="telephone">555-555-5555</span>
+        <span class="header">Email</span><span itemprop="email">john@ringlead.com</span>
+    </div>
+</body>
+</html>

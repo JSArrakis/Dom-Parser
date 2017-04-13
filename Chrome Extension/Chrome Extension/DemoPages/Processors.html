@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <link rel="" type="text/css" href="DemoPage.css">
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="../contentScript.js"></script>
+    <script type="text/javascript" src="testsScript.js"></script>
+    <style>
+        DIV#TestsPane {
+            width: 18%;
+            height: 96%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            padding: 10px;
+            text-align: center;
+        }
+        DIV#ResultsPane {
+            width: 80%;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            height: 96%;
+            background-color: silver;
+            padding: 10px;
+        }
+        INPUT[type=button] {
+            width: 100%;
+        }
+        TEXTAREA#Results {
+            width: 100%;
+            height: 96%;
+        }
+        DIV#Results {
+            width: 100%;
+            height: 96%;
+            font-weight: normal;
+            overflow: scroll;
+            background-color: white;
+            padding: 10px;
+        }
+        SPAN {
+        }
+            DIV#Result {
+                font-weight: bold;
+                width: 100%;
+                padding: 2px;
+                text-align: center;
+            font-weight: bold;
+            }
+            DIV#Result.Pass {
+                background-color: green;
+            }
+            DIV#Result.Fail {
+                background-color: red;
+            }
+            BODY {
+                overflow: hidden;
+            }
+            SPAN {
+                display: inline-block;
+            }
+            SPAN.fieldName {
+                width: 200px;
+                font-style: italic;
+            }
+            SPAN.fieldRecieved {
+                width: 300px;
+            }
+            SPAN.fieldExpected  {
+                width: 300px;
+            }
+            SPAN.fieldNotFound  {
+                font-style: italic;
+                color: silver;
+            }
+            SPAN.fieldResult {
+                width: 100px;
+                text-align: center;
+            }
+            SPAN.fieldPass {
+                color: green;
+            }
+            SPAN.fieldFail {
+                color: red;
+            }
+            SPAN.testName {
+                width: 800px;
+                font-weight: bold;
+            }
+            SPAN.testResult {
+                width: 100px;
+                text-align: center;
+                font-weight: bold;
+            }
+            SPAN.testPass {
+                color: green;
+            }
+            SPAN.testFail {
+                color: red;
+            }
+    </style>
+</head>
+<body>
+    <div id="Nav">
+        <a href="Selector.html">Pattern Demo Page</a>
+        <a href="Qualifier.html">Qualifier Demo Page</a>
+        <a href="Buttons.html">Button Demo Page</a>
+        <a href="Processors.html">Test Processor Page</a>
+    </div>
+    <div id="TestsPane">
+        <span>Tests</span>
+        <input type="button" id="cmdSplitFullName" onclick="javascript: TestsScript.cmdSplitFullName();" value="Name Full Split" />
+        <input type="button" id="cmdSplitHandle" onclick="javascript: TestsScript.cmdSplitHandle();" value="Name Handle" />
+        <input type="button" id="cmdHTMLEncode" onclick="javascript: TestsScript.cmdHTMLEncode();" value="HTML Encode" />
+        <input type="button" id="cmdHTMLDecode" onclick="javascript: TestsScript.cmdHTMLDecode();" value="HTML Decode" />
+        <input type="button" id="cmdReplaceNonStandardCharacters" onclick="javascript: TestsScript.cmdReplaceNonStandardCharacters();" value="Replace Non-Standard Characters" />
+        <input type="button" id="cmdReplaceNonBreakingSpaces" onclick="javascript: TestsScript.cmdReplaceNonBreakingSpaces();" value="Replace Non-Breaking Spaces" />
+        <input type="button" id="cmdRemove" onclick="javascript: TestsScript.cmdRemove();" value="Remove" />
+        <input type="button" id="cmdReplace" onclick="javascript: TestsScript.cmdReplace();" value="Replace" />
+        <input type="button" id="cmdSplit" onclick="javascript: TestsScript.cmdSplit();" value="Split" />
+        <a href="javascript:location.reload();">Refresh</a>
+    </div>
+    <div id="ResultsPane">
+        <div id="Result">No Test Run</div>
+        <div id="Header">
+            <span class="fieldName">Field</span>
+            <span class="fieldRecieved">Recieved</span>
+            <span class="fieldExpected">Expected</span>
+            <span class="fieldResult">Result</span>
+        </div>
+        <!--<textarea id="Results"></textarea>-->
+        <div id="Results"></div>
+    </div>
+</body>
+</html>
